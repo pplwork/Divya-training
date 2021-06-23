@@ -1,0 +1,22 @@
+extends template
+block title
+  title Edit-Articles
+  link(rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.css")
+block content
+  .container
+    h1 Edit Form
+    form(method="POST" ,action='/article/edit/'+id)
+      #form-group
+        label Title:
+        input.form-control(name='title',type='text')
+      #form-group
+        label Author:
+        input.form-control(name='author',type='text')
+      #form-group
+        label Body:
+        textarea.form-control.mb-2(name='Body')
+      input.btn.btn-primary(type='submit',value='submit')
+block scripts
+  
+  script(src="../../bower_components/bootstrap/dist/js/bootstrap.js")
+  script(src="../../bower_components/jquery/dist/jquery.js")

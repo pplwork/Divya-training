@@ -1,0 +1,16 @@
+extends template
+block title
+  link(rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css")
+  title=article._id
+block content
+  .container
+    h1=article.title
+    p written by #{article.author}
+    p=article.body
+  
+    a.btn.btn-primary.m-2(href="/article/edit/"+article._id) Edit
+    a.btn.btn-danger.delete-article(href="#",data-articles=article._id) Delete
+block scripts
+  script(src="../js/main.js")
+  script(src="../bower_components/bootstrap/dist/js/bootstrap.js")
+  script(src="../bower_components/jquery/dist/jquery.js")
